@@ -1,0 +1,28 @@
+[h1]Ice Skates[/h1]
+Faster chefs, slippery turns, and two fading ice streaks.
+
+Ice Skates adds a hands-free equipment tool with a controllable momentum feel. Skate around tight kitchens, drift through turns, and keep carrying food as usual. The effect belongs only to the chef wearing the skates.
+
+[h2]How to play[/h2]
+[list]
+[*]A free Ice Skates rack parcel arrives during restaurant prep. Open it before service.
+[*]Move the rack normally during prep; it stays fixed during service.
+[*]During service or practice, take skates from the rack to equip them. Return them to the rack to unequip.
+[*]The rack supplies every chef, but each chef has only one native equipment slot. Remove another equipped tool first.
+[*]Skating increases movement force and adds smoothed steering. PlateUp still handles collisions and drag; this is not a separate physics simulation.
+[*]Two cosmetic ground streaks follow your blades and fade after you stop. They do not make the floor slippery for other chefs.
+[/list]
+
+[h2]Required mods[/h2]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2898069883]KitchenLib[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2898033283]HarmonyX[/url]
+
+Restart PlateUp after subscribing. Do not load both a local Mods-folder copy and the Workshop copy of Ice Skates. For multiplayer, every player should use the same version and dependencies.
+
+[h2]Version and testing[/h2]
+Version 0.3.1, checked on PlateUp 1.5.2-7473 with KitchenLib 0.10.1. Includes 42 pure-logic tests, native integration checks, and rendered trail visibility/fade checks. Equipped skating and ground streaks were also verified in a live solo restaurant. Remote and couch co-op have not been comprehensively gameplay-tested.
+
+[h2]Source and screenshots[/h2]
+[url=https://github.com/cschubiner/plateup-ice-skates]Source, build instructions, tuning guide, screenshots, and issue tracker[/url]
+
+The Workshop preview is an isolated in-engine render of the actual skate assets. The repository includes real restaurant screenshots. Other mods visible in those gameplay screenshots are not required or bundled.
