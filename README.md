@@ -18,6 +18,8 @@ Both images show the actual mod in PlateUp. The second screenshot also contains 
 
 ## Download
 
+Subscribe on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3799434687). The public listing includes KitchenLib and HarmonyX as required items.
+
 Source: [cschubiner/plateup-ice-skates](https://github.com/cschubiner/plateup-ice-skates).
 
 For a prebuilt local installation, get the ZIP from [GitHub Releases](https://github.com/cschubiner/plateup-ice-skates/releases). Extract its `IceSkates` folder into the game's `Mods` directory with PlateUp closed. Subscribe to [KitchenLib](https://steamcommunity.com/sharedfiles/filedetails/?id=2898069883) and [HarmonyX](https://steamcommunity.com/sharedfiles/filedetails/?id=2898033283). Do not load both a local copy and a Workshop copy of Ice Skates at the same time.
@@ -137,6 +139,8 @@ For Workshop publishing, open:
 ```
 
 Then select this project folder, the folder that contains `content`.
+
+The root `plateup_mod_metadata.json` stores the published Workshop item ID `3799434687`. Keep it and choose **Update**, not **Create**, when publishing a new version of this mod. This uploader metadata is separate from the game mod metadata inside `content`. The existing listing is Public; verify its visibility and required items after updates.
 
 ## Tuning guide
 
