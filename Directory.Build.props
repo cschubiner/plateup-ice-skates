@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <PlateUpGameFolder Condition="'$(PlateUpGameFolder)' == ''">C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp</PlateUpGameFolder>
+    <PlateUpManagedFolder>$(PlateUpGameFolder)\PlateUp_Data\Managed</PlateUpManagedFolder>
+    <KitchenLibWorkshopDll Condition="'$(KitchenLibWorkshopDll)' == ''">C:\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898069883\KitchenLib-Workshop.dll</KitchenLibWorkshopDll>
+    <EnableModDeployLocal Condition="'$(EnableModDeployLocal)' == ''">false</EnableModDeployLocal>
+    <Nullable>enable</Nullable>
+    <HarmonyWorkshopDll Condition="'$(HarmonyWorkshopDll)' == ''">C:\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898033283\0Harmony.dll</HarmonyWorkshopDll>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+</Project>

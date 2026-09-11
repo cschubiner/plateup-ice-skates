@@ -1,0 +1,20 @@
+# Optional GitHub Actions template. Place in .github/workflows after granting workflow access.
+name: Core tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-dotnet@v6.0.0
+        with:
+          dotnet-version: 9.0.x
+      - name: Test pure rules and configuration
+        run: dotnet test tests/IceSkates.Core.Tests/IceSkates.Core.Tests.csproj --configuration Release

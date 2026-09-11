@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Local.props" Condition="Exists('..\..\Local.props')" />
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <PlateUpManagedFolder>$(PlateUpGameFolder)\PlateUp_Data\Managed</PlateUpManagedFolder>
+    <Version>0.3.1</Version>
+    <Configurations>Debug;Release</Configurations>
+    <AssemblyName>$(MSBuildProjectName)-Workshop</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <WorkshopDir>$(MSBuildProjectDirectory)\..\..\content</WorkshopDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="..\..\content\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <Reference Include="$(PlateUpManagedFolder)\*.dll" Exclude="$(PlateUpManagedFolder)\mscorlib.dll;$(PlateUpManagedFolder)\System*.dll;$(PlateUpManagedFolder)\Microsoft*.dll;$(PlateUpManagedFolder)\netstandard.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony"><HintPath>$(HarmonyWorkshopDll)</HintPath><Private>false</Private></Reference>
+    <ProjectReference Include="..\IceSkates.Core\IceSkates.Core.csproj" />
+    <Reference Include="KitchenLib">
+      <HintPath>$(KitchenLibWorkshopDll)</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(PlateUpManagedFolder)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Kitchen.Common">
+      <HintPath>$(PlateUpManagedFolder)\Kitchen.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Kitchen.GameData">
+      <HintPath>$(PlateUpManagedFolder)\Kitchen.GameData.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="KitchenMods">
+      <HintPath>$(PlateUpManagedFolder)\KitchenMods.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(PlateUpManagedFolder)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(PlateUpManagedFolder)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(PlateUpManagedFolder)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(PlateUpManagedFolder)\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>$(PlateUpManagedFolder)\Unity.Entities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="BundleWorkshop" AfterTargets="Build" Condition="$(EnableModDeployLocal) == 'true'">
+    <Copy SourceFiles="$(TargetDir)$(MSBuildProjectName)-Workshop.dll" DestinationFolder="$(WorkshopDir)" />
+    <Copy SourceFiles="$(TargetDir)IceSkates.Core.dll" DestinationFolder="$(WorkshopDir)" />
+  </Target>
+</Project>

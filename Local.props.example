@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <PlateUpGameFolder>C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp</PlateUpGameFolder>
+    <KitchenLibWorkshopDll>C:\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898069883\KitchenLib-Workshop.dll</KitchenLibWorkshopDll>
+    <HarmonyWorkshopDll>C:\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898033283\0Harmony.dll</HarmonyWorkshopDll>
+  </PropertyGroup>
+</Project>

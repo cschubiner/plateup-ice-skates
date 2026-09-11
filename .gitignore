@@ -1,0 +1,14 @@
+bin/
+obj/
+TestResults/
+.vs/
+.idea/
+*.user
+*.suo
+*.nupkg
+content/*.dll
+content/*.pdb
+content/*.deps.json
+content/*.runtimeconfig.json
+Local.props
+artifacts/
